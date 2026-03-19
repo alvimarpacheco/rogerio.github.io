@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rogerinho Construções | Obras Completas em São Paulo</title>
+<meta name="description" content="Construção civil completa em São Paulo: fundação, alvenaria, hidráulica, elétrica, gesso, pintura e acabamento. Nota Fiscal e ART em todas as obras. (11) 93258-5638"/>
+<meta name="keywords" content="construção civil São Paulo, reforma residencial SP, construtora SP, obra completa SP, hidráulica elétrica gesso pintura"/>
+<meta property="og:title" content="Rogerinho Construções | Da Fundação ao Acabamento"/>
+<meta property="og:description" content="Obras completas com nota fiscal, ART e equipe uniformizada. São Paulo e Grande SP."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+
+<style>
+/* =============================================
+   TOKENS
+============================================= */
+:root{
+  --ink:      #0e0e0c;
+  --coal:     #191916;
+  --charcoal: #222220;
+  --stone:    #2c2c29;
+  --gold:     #d4920e;
+  --gold-lt:  #f0b030;
+  --ember:    #c84b1a;
+  --cream:    #f4f0e6;
+  --white:    #ffffff;
+  --mute:     #6a6a62;
+  --mute-lt:  #999990;
+  --border:   rgba(255,255,255,0.07);
+  --r:        3px;
+  --ease:     cubic-bezier(.4,0,.2,1);
+}
+
+/* =============================================
+   RESET & BASE — MOBILE FIRST
+============================================= */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--coal);
+  color:var(--cream);
+  font-family:'DM Sans',sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+/* =============================================
+   LAYOUT
+============================================= */
+.wrap{width:100%;max-width:1280px;margin:0 auto;padding:0 20px}
+@media(min-width:640px){.wrap{padding:0 32px}}
+@media(min-width:1024px){.wrap{padding:0 48px}}
+
+.sec{padding:72px 0}
+@media(min-width:768px){.sec{padding:100px 0}}
+@media(min-width:1024px){.sec{padding:128px 0}}
+
+/* =============================================
+   REVEAL ANIMATION
+============================================= */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.rv.on{opacity:1;transform:none}
+.rv1{transition-delay:.1s}.rv2{transition-delay:.18s}.rv3{transition-delay:.26s}
+.rv4{transition-delay:.34s}.rv5{transition-delay:.42s}
+
+/* =============================================
+   TYPOGRAPHY
+============================================= */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px
+}
+.eyebrow::before{content:'';width:20px;height:2px;background:var(--gold);flex-shrink:0}
+
+h1,h2.display,.display{
+  font-family:'Bebas Neue',sans-serif;
+  line-height:.9;letter-spacing:-.5px
+}
+.d-hero{font-size:clamp(52px,12vw,110px)}
+.d-xl  {font-size:clamp(40px,7vw,80px)}
+.d-lg  {font-size:clamp(32px,5vw,64px)}
+.d-md  {font-size:clamp(26px,4vw,48px)}
+
+.serif{font-family:'DM Serif Display',serif}
+
+/* =============================================
+   BUTTONS
+============================================= */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-size:14px;font-weight:600;letter-spacing:.3px;
+  padding:14px 26px;border-radius:var(--r);
+  transition:all .22s var(--ease);white-space:nowrap;
+}
+.btn svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 12px 32px rgba(212,146,14,.35)}
+.btn-outline{color:var(--cream);border:1.5px solid rgba(255,255,255,.2)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.btn-ghost{background:rgba(212,146,14,.1);color:var(--gold);border:1px solid rgba(212,146,14,.3)}
+.btn-ghost:hover{background:rgba(212,146,14,.18)}
+.btn-full{width:100%}
+
+/* =============================================
+   TOPBAR
+============================================= */
+#topbar{background:var(--gold);padding:9px 0}
+.topbar-in{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:6px
+}
+.topbar-in span,.topbar-in a{
+  font-size:12px;font-weight:600;color:var(--ink);
+}
+.topbar-in a{display:flex;align-items:center;gap:5px;transition:opacity .2s}
+.topbar-in a:hover{opacity:.75}
+
+/* =============================================
+   NAVBAR
+============================================= */
+#nav{
+  position:sticky;top:0;z-index:900;
+  background:rgba(25,25,22,.97);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.nav-in{
+  display:flex;align-items:center;
+  justify-content:space-between;
+  height:64px
+}
+@media(min-width:1024px){.nav-in{height:72px}}
+
+/* logo */
+.logo{display:flex;align-items:center;gap:11px}
+.logo-hex{
+  width:42px;height:42px;
+  background:var(--gold);
+  clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;transition:background .2s
+}
+.logo:hover .logo-hex{background:var(--gold-lt)}
+.logo-hex span{font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--ink)}
+.logo-words{display:flex;flex-direction:column;line-height:1.1}
+.logo-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px;color:var(--cream)}
+.logo-sub{font-size:9px;letter-spacing:4px;text-transform:uppercase;font-weight:600;color:var(--gold)}
+
+/* desktop links */
+.nav-links{display:none}
+@media(min-width:1024px){
+  .nav-links{
+    display:flex;align-items:center;gap:2px
+  }
+  .nav-links a{
+    font-size:13px;font-weight:500;letter-spacing:.4px;
+    color:var(--mute-lt);padding:7px 13px;border-radius:var(--r);
+    transition:color .2s;position:relative
+  }
+  .nav-links a::after{
+    content:'';position:absolute;bottom:3px;left:13px;right:13px;
+    height:1px;background:var(--gold);
+    transform:scaleX(0);transition:transform .2s
+  }
+  .nav-links a:hover{color:var(--cream)}
+  .nav-links a:hover::after{transform:scaleX(1)}
+}
+
+.nav-cta{display:none}
+@media(min-width:1024px){.nav-cta{display:inline-flex;opacity:0;pointer-events:none;transition:opacity .3s}}
+.nav-cta.show{opacity:1;pointer-events:auto}
+
+/* hamburger */
+.ham{
+  display:flex;flex-direction:column;gap:5px;
+  padding:8px;border-radius:var(--r);
+}
+@media(min-width:1024px){.ham{display:none}}
+.ham span{display:block;width:24px;height:2px;background:var(--cream);border-radius:2px;transition:all .25s var(--ease)}
+.ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* mobile menu */
+.mob-menu{
+  display:none;flex-direction:column;
+  background:var(--charcoal);
+  border-bottom:1px solid var(--border);
+  padding:16px 20px 20px
+}
+.mob-menu a{
+  font-size:16px;font-weight:500;color:var(--mute-lt);
+  padding:12px 0;border-bottom:1px solid var(--border);
+  transition:color .2s
+}
+.mob-menu a:last-of-type{border-bottom:none}
+.mob-menu a:hover{color:var(--gold)}
+.mob-menu .btn{margin-top:14px}
+
+/* =============================================
+   HERO
+============================================= */
+#hero{
+  min-height:calc(100svh - 106px);
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:60px 0 48px
+}
+@media(min-width:1024px){
+  #hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:calc(100svh - 106px);
+    padding:0
+  }
+}
+
+/* ambient */
+.hero-glow{
+  position:absolute;width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(212,146,14,.1) 0%,transparent 70%);
+  top:-150px;left:-150px;pointer-events:none;
+  animation:gPulse 7s ease-in-out infinite
+}
+@keyframes gPulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.12);opacity:1}}
+
+.hero-grain{
+  position:absolute;inset:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");
+  opacity:.5
+}
+
+/* hero left */
+.hero-left{
+  position:relative;z-index:2;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:0 20px
+}
+@media(min-width:640px){.hero-left{padding:0 32px}}
+@media(min-width:1024px){.hero-left{padding:80px 56px 80px 48px}}
+
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:24px;
+  animation:fadeUp .5s ease both
+}
+.hero-tag .dot{
+  width:7px;height:7px;border-radius:50%;background:var(--gold);
+  animation:blink 2s infinite
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+h1.hero-h1{animation:fadeUp .6s .08s ease both}
+h1.hero-h1 .line-gold{color:var(--gold)}
+h1.hero-h1 .line-ghost{
+  color:transparent;
+  -webkit-text-stroke:1.5px rgba(244,240,230,.25)
+}
+
+.hero-sub{
+  font-size:clamp(15px,2vw,17px);font-weight:300;
+  color:var(--mute-lt);line-height:1.75;max-width:500px;
+  margin-top:20px;
+  animation:fadeUp .6s .16s ease both
+}
+
+.hero-badges{
+  display:flex;flex-wrap:wrap;gap:8px;
+  margin-top:22px;
+  animation:fadeUp .6s .24s ease both
+}
+.badge{
+  display:flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  color:var(--cream);font-size:12px;font-weight:500;
+  padding:7px 13px;border-radius:100px;
+  transition:all .2s
+}
+.badge:hover{border-color:var(--gold);color:var(--gold);background:rgba(212,146,14,.07)}
+
+.hero-actions{
+  display:flex;flex-wrap:wrap;gap:12px;
+  margin-top:32px;
+  animation:fadeUp .6s .32s ease both
+}
+
+.hero-proof{
+  display:flex;align-items:center;gap:12px;
+  margin-top:32px;
+  animation:fadeUp .6s .4s ease both
+}
+.avatars{display:flex}
+.av{
+  width:36px;height:36px;border-radius:50%;
+  border:2px solid var(--coal);
+  background:var(--stone);
+  margin-left:-10px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Bebas Neue',sans-serif;font-size:15px;color:var(--gold);
+  overflow:hidden;flex-shrink:0
+}
+.av:first-child{margin-left:0}
+.av img{width:100%;height:100%;object-fit:cover}
+.proof-txt{font-size:13px;color:var(--mute-lt);line-height:1.4}
+.proof-txt strong{color:var(--cream)}
+.stars{color:var(--gold);font-size:12px;margin-bottom:2px}
+
+/* hero right */
+.hero-right{
+  display:none;
+  position:relative;z-index:2;
+  align-items:center;justify-content:center;
+  padding:40px 48px 40px 20px
+}
+@media(min-width:1024px){.hero-right{display:flex}}
+
+.photo-stack{
+  position:relative;
+  width:100%;max-width:520px;height:580px
+}
+.photo-main{
+  position:absolute;inset:0;
+  border-radius:8px;overflow:hidden
+}
+.photo-main img{
+  width:100%;height:100%;object-fit:cover;
+  object-position:center 30%
+}
+.photo-main::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(14,14,12,.35) 0%,transparent 50%),
+             linear-gradient(to top,rgba(14,14,12,.7) 0%,transparent 45%)
+}
+
+/* float cards */
+.fcard{
+  position:absolute;z-index:5;
+  background:rgba(22,22,20,.93);
+  border:1px solid rgba(212,146,14,.3);
+  backdrop-filter:blur(16px);
+  border-radius:8px;padding:14px 18px;
+  animation:fcFloat 4s ease-in-out infinite
+}
+.fcard:nth-child(2){animation-delay:-1.5s}
+.fcard:nth-child(3){animation-delay:-3s}
+@keyframes fcFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.fcard.top-left{top:24px;left:-24px}
+.fcard.bottom{bottom:36px;left:16px}
+.fcard.mid-right{top:45%;right:-28px;transform:translateY(-50%)}
+.fcard.mid-right:hover{transform:translateY(calc(-50% - 4px))}
+.fc-num{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--gold);line-height:1}
+.fc-lbl{font-size:11px;color:var(--mute-lt);text-transform:uppercase;letter-spacing:1.5px;margin-top:2px}
+.fc-row{display:flex;align-items:center;gap:10px}
+.fc-ico{
+  width:34px;height:34px;border-radius:4px;
+  background:rgba(212,146,14,.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;flex-shrink:0
+}
+
+/* =============================================
+   RIBBON
+============================================= */
+#ribbon{
+  background:var(--ink);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  overflow:hidden;padding:16px 0
+}
+.ribbon-track{
+  display:flex;width:max-content;
+  animation:marquee 28s linear infinite
+}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ri{
+  display:flex;align-items:center;gap:9px;
+  padding:0 40px;
+  font-size:13px;font-weight:500;color:var(--mute-lt);
+  white-space:nowrap;border-right:1px solid var(--border)
+}
+.ri strong{color:var(--gold)}
+
+/* =============================================
+   SOBRE
+============================================= */
+#sobre{background:var(--charcoal)}
+.sobre-grid{
+  display:grid;gap:48px
+}
+@media(min-width:1024px){
+  .sobre-grid{grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+}
+
+.sobre-visual{position:relative;display:none}
+@media(min-width:1024px){.sobre-visual{display:block}}
+
+.sobre-img-main{
+  border-radius:8px;overflow:hidden;height:520px
+}
+.sobre-img-main img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+
+.sobre-img-inset{
+  position:absolute;
+  bottom:-28px;right:-24px;
+  width:180px;height:180px;
+  border-radius:8px;overflow:hidden;
+  border:4px solid var(--charcoal);
+  box-shadow:0 20px 56px rgba(0,0,0,.5)
+}
+.sobre-img-inset img{width:100%;height:100%;object-fit:cover}
+
+.sobre-badge{
+  position:absolute;
+  top:28px;left:-20px;
+  background:var(--gold);color:var(--ink);
+  padding:18px 16px;border-radius:4px;text-align:center;
+  box-shadow:0 14px 40px rgba(212,146,14,.4)
+}
+.sobre-badge .n{font-family:'Bebas Neue',sans-serif;font-size:38px;line-height:1}
+.sobre-badge .t{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+
+.sobre-lead{font-size:clamp(17px,2vw,19px);font-weight:300;color:var(--cream);line-height:1.7;margin-bottom:16px}
+.sobre-body{font-size:15px;color:var(--mute-lt);line-height:1.8;margin-bottom:14px}
+
+.assinatura{
+  display:flex;align-items:center;gap:14px;
+  margin-top:28px;padding-top:24px;
+  border-top:1px solid var(--border)
+}
+.assin-av{
+  width:52px;height:52px;border-radius:50%;
+  border:2px solid var(--gold);overflow:hidden;flex-shrink:0
+}
+.assin-av img{width:100%;height:100%;object-fit:cover}
+.assin-av-ph{
+  width:100%;height:100%;background:var(--stone);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--gold)
+}
+.assin-nome{font-weight:700;color:var(--cream);font-size:15px}
+.assin-cargo{font-size:13px;color:var(--gold)}
+
+/* =============================================
+   STATS BAR
+============================================= */
+#stats{background:var(--gold);padding:0}
+.stats-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+@media(min-width:768px){.stats-grid{grid-template-columns:repeat(5,1fr)}}
+.stat{
+  padding:36px 16px;text-align:center;
+  border-right:1px solid rgba(0,0,0,.1);
+  border-bottom:1px solid rgba(0,0,0,.1);
+  transition:background .2s
+}
+@media(min-width:768px){
+  .stat{padding:44px 20px;border-bottom:none}
+  .stat:last-child{border-right:none}
+}
+.stat:hover{background:rgba(0,0,0,.07)}
+.stat-n{
+  font-family:'Bebas Neue',sans-serif;font-size:48px;
+  color:var(--ink);line-height:1;
+  display:flex;align-items:flex-start;justify-content:center;gap:2px
+}
+@media(min-width:768px){.stat-n{font-size:56px}}
+.stat-n sup{font-size:20px;margin-top:8px}
+.stat-n sub{font-size:18px;margin-top:26px}
+.stat-l{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(0,0,0,.5);margin-top:6px}
+
+/* =============================================
+   SERVIÇOS
+============================================= */
+#servicos{position:relative}
+.srv-header{
+  display:grid;gap:24px;margin-bottom:48px
+}
+@media(min-width:768px){
+  .srv-header{grid-template-columns:1fr 1fr;align-items:end;margin-bottom:56px}
+}
+.srv-desc{font-size:15px;color:var(--mute-lt);line-height:1.75;max-width:440px}
+@media(min-width:768px){.srv-desc{align-self:end}}
+
+.srv-grid{
+  display:grid;gap:2px;
+  background:var(--ink)
+}
+@media(min-width:640px){.srv-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.srv-grid{grid-template-columns:repeat(3,1fr)}}
+
+.srv-card{
+  background:var(--charcoal);
+  padding:36px 30px;
+  position:relative;overflow:hidden;
+  transition:background .25s var(--ease);
+}
+@media(min-width:768px){.srv-card{padding:44px 40px}}
+.srv-card::after{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-lt));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .3s var(--ease)
+}
+.srv-card:hover{background:#2f2f2b}
+.srv-card:hover::after{transform:scaleX(1)}
+
+.srv-num{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:4px;color:var(--gold);margin-bottom:18px}
+.srv-ico{
+  width:50px;height:50px;
+  background:rgba(212,146,14,.1);border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;margin-bottom:18px;
+  transition:background .2s
+}
+.srv-card:hover .srv-ico{background:rgba(212,146,14,.2)}
+.srv-titulo{font-family:'DM Serif Display',serif;font-size:21px;color:var(--cream);margin-bottom:10px;line-height:1.2}
+.srv-desc-card{font-size:14px;color:var(--mute-lt);line-height:1.7;margin-bottom:14px}
+.srv-tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{
+  font-size:11px;font-weight:600;letter-spacing:.5px;
+  color:var(--gold);background:rgba(212,146,14,.1);
+  border:1px solid rgba(212,146,14,.2);
+  padding:3px 9px;border-radius:100px
+}
+
+/* =============================================
+   DIFERENCIAIS
+============================================= */
+#dif{background:var(--charcoal)}
+.dif-head{text-align:center;max-width:640px;margin:0 auto 56px}
+.dif-head p{font-size:16px;color:var(--mute-lt);line-height:1.75;margin-top:14px}
+
+.dif-grid{
+  display:grid;gap:16px
+}
+@media(min-width:640px){.dif-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.dif-grid{grid-template-columns:repeat(3,1fr)}}
+
+.dif-card{
+  padding:30px 28px;
+  border:1px solid var(--border);border-radius:8px;
+  background:var(--coal);
+  transition:all .25s var(--ease);position:relative;overflow:hidden
+}
+.dif-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  transform:scaleX(0);transition:transform .3s
+}
+.dif-card:hover{border-color:rgba(212,146,14,.25);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.3)}
+.dif-card:hover::before{transform:scaleX(1)}
+.dif-ico{
+  width:52px;height:52px;border-radius:6px;
+  background:rgba(212,146,14,.1);
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;margin-bottom:18px
+}
+.dif-titulo{font-family:'DM Serif Display',serif;font-size:19px;color:var(--cream);margin-bottom:8px}
+.dif-desc{font-size:14px;color:var(--mute-lt);line-height:1.7}
+
+/* =============================================
+   PORTFÓLIO
+============================================= */
+.pf-header{display:flex;flex-direction:column;gap:20px;margin-bottom:36px}
+@media(min-width:768px){
+  .pf-header{flex-direction:row;justify-content:space-between;align-items:flex-end}
+}
+.pf-filters{display:flex;flex-wrap:wrap;gap:8px}
+.pf-btn{
+  font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  padding:7px 16px;border-radius:100px;
+  border:1px solid var(--border);background:transparent;color:var(--mute-lt);
+  transition:all .2s;cursor:pointer
+}
+.pf-btn.active,.pf-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+
+.pf-grid{
+  display:grid;gap:10px;
+  grid-template-columns:1fr
+}
+@media(min-width:640px){.pf-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.pf-grid{grid-template-columns:repeat(3,1fr)}}
+
+.pf-item{
+  position:relative;border-radius:6px;overflow:hidden;
+  background:var(--charcoal);cursor:pointer;
+}
+@media(min-width:1024px){
+  .pf-item.tall{grid-row:span 2}
+  .pf-item.wide{grid-column:span 2}
+}
+.pf-img{
+  width:100%;height:220px;object-fit:cover;
+  display:block;transition:transform .45s var(--ease)
+}
+@media(min-width:640px){.pf-img{height:240px}}
+@media(min-width:1024px){
+  .pf-item.tall .pf-img{height:100%;min-height:480px}
+  .pf-item:not(.tall) .pf-img{height:240px}
+}
+.pf-item:hover .pf-img{transform:scale(1.06)}
+
+.pf-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(14,14,12,.88) 0%,transparent 55%);
+  opacity:0;transition:opacity .3s;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:20px
+}
+.pf-item:hover .pf-ov{opacity:1}
+.pf-cat{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+.pf-title{font-family:'DM Serif Display',serif;font-size:18px;color:var(--cream)}
+.pf-loc{font-size:12px;color:var(--mute-lt);margin-top:2px}
+.pf-zoom{
+  position:absolute;top:12px;right:12px;
+  width:32px;height:32px;border-radius:50%;
+  background:rgba(22,22,20,.8);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;opacity:0;transition:opacity .3s
+}
+.pf-item:hover .pf-zoom{opacity:1}
+
+.pf-cta{text-align:center;margin-top:40px}
+
+/* lightbox */
+.lb{
+  position:fixed;inset:0;z-index:9000;
+  background:rgba(0,0,0,.95);
+  display:none;align-items:center;justify-content:center;
+  padding:20px
+}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:92vh;border-radius:4px;object-fit:contain}
+.lb-x{
+  position:absolute;top:20px;right:20px;
+  font-size:28px;color:var(--cream);
+  background:none;border:none;cursor:pointer;line-height:1;padding:4px
+}
+
+/* =============================================
+   ANTES & DEPOIS
+============================================= */
+#ad{background:var(--charcoal)}
+.ad-head{text-align:center;max-width:640px;margin:0 auto 48px}
+.ad-head p{font-size:16px;color:var(--mute-lt);line-height:1.75;margin-top:14px}
+
+.ad-grid{display:grid;gap:20px}
+@media(min-width:768px){.ad-grid{grid-template-columns:1fr 1fr}}
+
+.ad-card{
+  border-radius:8px;overflow:hidden;
+  background:var(--coal);border:1px solid var(--border)
+}
+.ad-imgs{display:grid;grid-template-columns:1fr 1fr;height:220px}
+@media(min-width:640px){.ad-imgs{height:240px}}
+.ad-side{position:relative;overflow:hidden}
+.ad-side img{width:100%;height:100%;object-fit:cover;display:block}
+.ad-lbl{
+  position:absolute;top:10px;
+  padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  border-radius:100px
+}
+.ad-lbl.a{left:10px;background:var(--ember);color:var(--white)}
+.ad-lbl.d{right:10px;background:var(--gold);color:var(--ink)}
+.ad-info{padding:18px 20px}
+.ad-titulo{font-family:'DM Serif Display',serif;font-size:18px;color:var(--cream);margin-bottom:4px}
+.ad-meta{font-size:13px;color:var(--mute-lt)}
+
+/* =============================================
+   PROCESSO
+============================================= */
+.proc-head{text-align:center;max-width:640px;margin:0 auto 56px}
+.proc-head p{font-size:16px;color:var(--mute-lt);line-height:1.75;margin-top:14px}
+
+.proc-steps{
+  display:grid;gap:32px;
+  grid-template-columns:1fr 1fr
+}
+@media(min-width:1024px){
+  .proc-steps{
+    grid-template-columns:repeat(5,1fr);
+    gap:0;position:relative
+  }
+  .proc-steps::before{
+    content:'';position:absolute;
+    top:31px;left:calc(10% + 14px);right:calc(10% + 14px);
+    height:1px;
+    background:linear-gradient(90deg,transparent,var(--gold) 15%,var(--gold) 85%,transparent)
+  }
+}
+.step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 8px}
+.step-circle{
+  width:62px;height:62px;border-radius:50%;
+  border:2px solid var(--gold);background:var(--coal);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:2;margin-bottom:18px;
+  transition:background .25s,border-color .25s
+}
+.step:hover .step-circle{background:var(--gold)}
+.step:hover .step-n{color:var(--ink)}
+.step-n{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--gold);transition:color .25s}
+.step h3{font-family:'DM Serif Display',serif;font-size:17px;color:var(--cream);margin-bottom:7px}
+.step p{font-size:13px;color:var(--mute-lt);line-height:1.6}
+
+/* =============================================
+   DEPOIMENTOS
+============================================= */
+#dep{background:var(--charcoal)}
+.dep-head{text-align:center;max-width:640px;margin:0 auto 16px}
+
+.dep-rating{
+  display:flex;align-items:center;justify-content:center;gap:20px;
+  margin:0 auto 48px;flex-wrap:wrap
+}
+.dep-big-n{font-family:'Bebas Neue',sans-serif;font-size:64px;color:var(--gold);line-height:1}
+.dep-big-s{font-size:20px;color:var(--gold)}
+.dep-big-l{font-size:13px;color:var(--mute-lt);margin-top:4px}
+
+.dep-grid{
+  display:grid;gap:16px
+}
+@media(min-width:640px){.dep-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.dep-grid{grid-template-columns:repeat(3,1fr)}}
+
+.dep-card{
+  background:var(--coal);border:1px solid var(--border);
+  border-radius:8px;padding:28px;
+  transition:all .25s var(--ease);position:relative
+}
+.dep-card:hover{border-color:rgba(212,146,14,.25);transform:translateY(-3px);box-shadow:0 14px 40px rgba(0,0,0,.3)}
+.dep-q{font-family:'DM Serif Display',serif;font-size:52px;color:var(--gold);opacity:.15;line-height:.7;margin-bottom:4px}
+.dep-stars{color:var(--gold);font-size:13px;margin-bottom:12px}
+.dep-txt{font-size:14px;font-style:italic;font-weight:300;color:var(--mute-lt);line-height:1.75;margin-bottom:20px}
+.dep-autor{
+  display:flex;align-items:center;gap:11px;
+  padding-top:16px;border-top:1px solid var(--border)
+}
+.dep-av{
+  width:44px;height:44px;border-radius:50%;
+  border:2px solid var(--gold);overflow:hidden;flex-shrink:0
+}
+.dep-av img{width:100%;height:100%;object-fit:cover}
+.dep-av-ph{
+  width:100%;height:100%;background:var(--stone);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Bebas Neue',sans-serif;font-size:17px;color:var(--gold)
+}
+.dep-nome{font-weight:700;color:var(--cream);font-size:14px}
+.dep-cidade{font-size:12px;color:var(--mute-lt)}
+.dep-obra{font-size:12px;color:var(--gold);margin-top:1px}
+
+/* =============================================
+   FAQ
+============================================= */
+.faq-head{text-align:center;max-width:640px;margin:0 auto 48px}
+.faq-head p{font-size:16px;color:var(--mute-lt);line-height:1.75;margin-top:14px}
+
+.faq-list{
+  max-width:900px;margin:0 auto;
+  display:grid;gap:10px
+}
+@media(min-width:768px){.faq-list{grid-template-columns:1fr 1fr}}
+
+.faq-item{
+  border:1px solid var(--border);border-radius:8px;overflow:hidden;
+  transition:border-color .2s
+}
+.faq-item.open{border-color:rgba(212,146,14,.35)}
+.faq-q{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:18px 20px;cursor:pointer;
+  background:var(--charcoal);transition:background .2s
+}
+.faq-q:hover{background:var(--stone)}
+.faq-q-t{font-size:14px;font-weight:600;color:var(--cream);line-height:1.4}
+.faq-arr{
+  width:26px;height:26px;border-radius:50%;
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;color:var(--gold);flex-shrink:0;
+  transition:transform .3s
+}
+.faq-item.open .faq-arr{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-item.open .faq-a{max-height:260px}
+.faq-a-in{
+  padding:0 20px 18px;
+  font-size:14px;color:var(--mute-lt);line-height:1.75;
+  background:var(--charcoal)
+}
+
+/* =============================================
+   ÁREA DE ATUAÇÃO
+============================================= */
+#area{background:var(--charcoal)}
+.area-grid{display:grid;gap:48px}
+@media(min-width:1024px){.area-grid{grid-template-columns:1fr 1fr;align-items:center;gap:72px}}
+
+.cidades{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:8px;margin-top:24px
+}
+.cidade{
+  display:flex;align-items:center;gap:7px;
+  font-size:14px;color:var(--mute-lt);
+  padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);
+  transition:all .2s
+}
+.cidade:hover{border-color:rgba(212,146,14,.3);color:var(--cream)}
+.cidade::before{content:'📍';font-size:12px}
+
+.area-map{
+  background:var(--coal);border:1px solid var(--border);
+  border-radius:8px;overflow:hidden;height:380px;
+  display:flex;align-items:center;justify-content:center
+}
+@media(min-width:1024px){.area-map{height:440px}}
+.area-map iframe{width:100%;height:100%;border:none;filter:grayscale(1) brightness(.8) sepia(.1)}
+.area-map-ph{text-align:center;padding:32px}
+.area-map-ph .ico{font-size:52px;margin-bottom:12px}
+.area-map-ph p{font-size:14px;color:var(--mute-lt);line-height:1.7}
+.area-map-ph a{color:var(--gold);font-weight:600}
+
+/* =============================================
+   CTA FINAL
+============================================= */
+#cta{background:var(--ink);position:relative;overflow:hidden}
+#cta::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 80% at 20% 50%,rgba(212,146,14,.09) 0%,transparent 60%)
+}
+.cta-grid{
+  display:grid;gap:48px;position:relative;z-index:2
+}
+@media(min-width:1024px){.cta-grid{grid-template-columns:1fr 1fr;gap:80px;align-items:start}}
+
+.cta-checks{display:flex;flex-direction:column;gap:10px;margin-top:24px}
+.cta-check{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--cream)}
+.check-ico{
+  width:22px;height:22px;border-radius:50%;
+  background:var(--gold);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;flex-shrink:0
+}
+
+.quick-contacts{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+.qc{
+  display:flex;align-items:center;gap:12px;
+  padding:14px 18px;background:var(--charcoal);
+  border-radius:var(--r);transition:all .22s var(--ease)
+}
+.qc:hover{background:var(--gold)}
+.qc:hover .qc-lbl{color:rgba(0,0,0,.6)}
+.qc:hover .qc-val{color:var(--ink)}
+.qc-ico{
+  width:40px;height:40px;border-radius:4px;
+  background:rgba(212,146,14,.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:19px;flex-shrink:0;transition:background .22s var(--ease)
+}
+.qc:hover .qc-ico{background:rgba(0,0,0,.15)}
+.qc-lbl{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mute-lt);font-weight:600;transition:color .22s}
+.qc-val{font-family:'Bebas Neue',sans-serif;font-size:19px;color:var(--cream);letter-spacing:1px;transition:color .22s}
+
+/* form */
+.form-box{
+  background:var(--charcoal);border:1px solid var(--border);
+  border-radius:10px;padding:32px 28px
+}
+@media(min-width:640px){.form-box{padding:40px 36px}}
+.form-title{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;color:var(--cream);margin-bottom:20px}
+.fg{margin-bottom:14px}
+.fg label{display:block;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--mute-lt);margin-bottom:6px}
+.fg input,.fg select,.fg textarea{
+  width:100%;background:var(--coal);border:1px solid var(--border);
+  border-radius:var(--r);color:var(--cream);
+  font-family:'DM Sans',sans-serif;font-size:14px;
+  padding:12px 14px;outline:none;transition:border-color .2s;appearance:none
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
+.fg textarea{resize:vertical;min-height:80px}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:480px){.fg-row{grid-template-columns:1fr}}
+.form-disclaimer{font-size:12px;color:var(--mute);text-align:center;margin-top:10px;line-height:1.5}
+
+.form-ok{display:none;text-align:center;padding:36px 0}
+.form-ok .ico{font-size:44px;margin-bottom:12px}
+.form-ok h3{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--cream);margin-bottom:8px}
+.form-ok p{font-size:14px;color:var(--mute-lt)}
+
+/* =============================================
+   FOOTER
+============================================= */
+footer{background:var(--ink);border-top:1px solid var(--border)}
+.ft-main{
+  display:grid;gap:36px;
+  padding:56px 0 44px;
+  border-bottom:1px solid var(--border)
+}
+@media(min-width:640px){.ft-main{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.ft-main{grid-template-columns:2fr 1fr 1fr 1fr}}
+
+.ft-brand p{font-size:14px;color:var(--mute-lt);line-height:1.75;margin-top:14px;max-width:300px}
+.ft-social{display:flex;gap:8px;margin-top:18px}
+.ft-soc{
+  width:36px;height:36px;border-radius:4px;
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;font-size:15px;
+  transition:all .2s
+}
+.ft-soc:hover{border-color:var(--gold);background:rgba(212,146,14,.1)}
+.ft-selos{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.selo{
+  background:var(--charcoal);border:1px solid var(--border);
+  border-radius:var(--r);padding:6px 10px;
+  font-size:10px;font-weight:700;letter-spacing:1px;color:var(--mute-lt);text-transform:uppercase
+}
+
+.ft-col-title{font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:18px}
+.ft-links{display:flex;flex-direction:column;gap:9px}
+.ft-links a{font-size:14px;color:var(--mute-lt);transition:color .2s}
+.ft-links a:hover{color:var(--cream)}
+.ft-contacts{display:flex;flex-direction:column;gap:10px}
+.ft-contacts a,.ft-contacts p{font-size:14px;color:var(--mute-lt);display:flex;align-items:flex-start;gap:7px;line-height:1.5;transition:color .2s}
+.ft-contacts a:hover{color:var(--gold)}
+
+.ft-bottom{
+  display:flex;flex-direction:column;gap:10px;
+  padding:20px 0;
+}
+@media(min-width:768px){.ft-bottom{flex-direction:row;justify-content:space-between;align-items:center}}
+.ft-bottom p{font-size:12px;color:var(--mute)}
+.ft-bottom .g{color:var(--gold)}
+.ft-legal{display:flex;gap:16px}
+.ft-legal a{font-size:12px;color:var(--mute);transition:color .2s}
+.ft-legal a:hover{color:var(--cream)}
+
+/* =============================================
+   WHATSAPP FLOAT
+============================================= */
+.wpp{
+  position:fixed;bottom:24px;right:20px;z-index:800;
+  display:flex;align-items:center;gap:9px;
+  background:#25D366;color:#fff;font-weight:700;font-size:14px;
+  padding:13px 20px 13px 16px;border-radius:50px;
+  box-shadow:0 8px 28px rgba(37,211,102,.45);
+  transition:all .22s var(--ease);
+  animation:wppIn .6s 1.5s ease both
+}
+@keyframes wppIn{from{opacity:0;transform:translateY(16px) scale(.9)}to{opacity:1;transform:none}}
+.wpp:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(37,211,102,.55)}
+.wpp svg{width:21px;height:21px;fill:#fff;flex-shrink:0}
+.wpp-pulse{
+  position:absolute;top:-4px;right:-4px;
+  width:14px;height:14px;border-radius:50%;
+  background:#ff4444;border:2px solid var(--ink);
+  animation:wp 2s infinite
+}
+@keyframes wp{0%{box-shadow:0 0 0 0 rgba(255,68,68,.5)}70%{box-shadow:0 0 0 7px rgba(255,68,68,0)}100%{box-shadow:0 0 0 0 rgba(255,68,68,0)}}
+
+/* =============================================
+   UTILITIES
+============================================= */
+.text-gold{color:var(--gold)}
+.mt-sm{margin-top:12px}
+.mt-md{margin-top:24px}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ TOPBAR ══════════════ -->
+<div id="topbar">
+  <div class="wrap">
+    <div class="topbar-in">
+      <span>🏗️ Obras residenciais e comerciais · SP e Grande SP · Nota Fiscal garantida</span>
+      <a href="https://wa.me/5511932585638?text=Olá!+Quero+um+orçamento+gratuito" target="_blank">
+        📱 (11) 93258-5638 — Fale agora
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
+<header id="nav">
+  <div class="wrap">
+    <div class="nav-in">
+      <a href="#" class="logo">
+        <div class="logo-hex"><span>RC</span></div>
+        <div class="logo-words">
+          <span class="logo-name">ROGERINHO</span>
+          <span class="logo-sub">Construções & Reformas</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#ad">Antes & Depois</a>
+        <a href="#dep">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#cta" class="btn btn-gold nav-cta" id="nav-cta">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.117 1.522 5.845L.057 23.527a.5.5 0 0 0 .606.606l5.735-1.464A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.944 0-3.77-.494-5.36-1.361l-.385-.215-3.978 1.016 1.04-3.648-.235-.374A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Orçamento Grátis
+      </a>
+      <button class="ham" id="ham" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mob-menu" id="mob">
+    <a href="#sobre">Sobre Nós</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#ad">Antes &amp; Depois</a>
+    <a href="#dep">Depoimentos</a>
+    <a href="#faq">Perguntas Frequentes</a>
+    <a href="#area">Área de Atuação</a>
+    <a href="https://wa.me/5511932585638" class="btn btn-gold btn-full" target="_blank">💬 Falar pelo WhatsApp</a>
+  </nav>
+</header>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-grain"></div>
+
+  <div class="hero-left">
+    <div class="hero-tag"><div class="dot"></div>São Paulo &amp; Grande SP · Desde 2014</div>
+
+    <h1 class="display d-hero hero-h1">
+      DA FUNDAÇÃO<br>
+      <span class="line-gold">AO ACABAMENTO</span><br>
+      <span class="line-ghost">PERFEITO.</span>
+    </h1>
+
+    <p class="hero-sub">
+      Construção e reforma completa para quem não aceita obra pela metade.
+      Equipe uniformizada, nota fiscal em tudo, ART inclusa — e o Rogerinho
+      acompanhando cada etapa da sua obra pessoalmente.
+    </p>
+
+    <div class="hero-badges">
+      <div class="badge">📄 Nota Fiscal</div>
+      <div class="badge">🏛️ RT / ART</div>
+      <div class="badge">👷 Equipe Uniformizada</div>
+      <div class="badge">🔒 Garantia de Obra</div>
+      <div class="badge">⭐ 5 estrelas no Google</div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="https://wa.me/5511932585638?text=Olá,%20quero%20um%20orçamento%20gratuito%20para%20minha%20obra!" target="_blank" class="btn btn-gold">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.117 1.522 5.845L.057 23.527a.5.5 0 0 0 .606.606l5.735-1.464A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.944 0-3.77-.494-5.36-1.361l-.385-.215-3.978 1.016 1.04-3.648-.235-.374A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Solicitar Orçamento Grátis
+      </a>
+      <a href="#portfolio" class="btn btn-outline">Ver Portfólio →</a>
+    </div>
+
+    <div class="hero-proof">
+      <div class="avatars">
+        <div class="av">M</div>
+        <div class="av">A</div>
+        <div class="av">R</div>
+        <div class="av">J</div>
+      </div>
+      <div class="proof-txt">
+        <div class="stars">★★★★★</div>
+        <strong>+500 obras entregues</strong> em SP e região
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="photo-stack">
+      <div class="photo-main">
+        <img src="1000113975.jpg" alt="Obra Rogerinho Construções — fachada residencial"/>
+      </div>
+      <div class="fcard top-left">
+        <div class="fc-num">500+</div>
+        <div class="fc-lbl">Obras Entregues</div>
+      </div>
+      <div class="fcard bottom">
+        <div class="fc-row">
+          <div class="fc-ico">📄</div>
+          <div>
+            <div class="fc-num" style="font-size:22px">100%</div>
+            <div class="fc-lbl">Com Nota Fiscal</div>
+          </div>
+        </div>
+      </div>
+      <div class="fcard mid-right">
+        <div class="fc-row">
+          <div class="fc-ico">⭐</div>
+          <div>
+            <div class="fc-num" style="font-size:22px">5.0</div>
+            <div class="fc-lbl">Google Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ RIBBON ══════════════ -->
+<div id="ribbon">
+  <div class="ribbon-track">
+    <div class="ri"><strong>🏗️ Construção Civil</strong></div>
+    <div class="ri"><strong>💧 Hidráulica</strong></div>
+    <div class="ri"><strong>⚡ Instalação Elétrica</strong></div>
+    <div class="ri"><strong>🪟 Gesso &amp; Drywall</strong></div>
+    <div class="ri"><strong>🎨 Pintura</strong></div>
+    <div class="ri"><strong>🪵 Acabamentos</strong></div>
+    <div class="ri"><strong>📄 Nota Fiscal</strong></div>
+    <div class="ri"><strong>🏛️ RT / ART</strong></div>
+    <div class="ri"><strong>👷 Equipe Uniformizada</strong></div>
+    <div class="ri"><strong>📍 SP e Grande SP</strong></div>
+    <div class="ri"><strong>🏗️ Construção Civil</strong></div>
+    <div class="ri"><strong>💧 Hidráulica</strong></div>
+    <div class="ri"><strong>⚡ Instalação Elétrica</strong></div>
+    <div class="ri"><strong>🪟 Gesso &amp; Drywall</strong></div>
+    <div class="ri"><strong>🎨 Pintura</strong></div>
+    <div class="ri"><strong>🪵 Acabamentos</strong></div>
+    <div class="ri"><strong>📄 Nota Fiscal</strong></div>
+    <div class="ri"><strong>🏛️ RT / ART</strong></div>
+    <div class="ri"><strong>👷 Equipe Uniformizada</strong></div>
+    <div class="ri"><strong>📍 SP e Grande SP</strong></div>
+  </div>
+</div>
+
+<!-- ══════════════ SOBRE ══════════════ -->
+<section id="sobre" class="sec" style="background:var(--charcoal)">
+  <div class="wrap">
+    <div class="sobre-grid">
+
+      <div class="sobre-visual rv">
+        <div class="sobre-img-main">
+          <img src="1000113972.jpg" alt="Corredor com acabamento LED — obra Rogerinho"/>
+        </div>
+        <div class="sobre-img-inset">
+          <img src="1000113968.jpg" alt="Detalhe de piso vinílico instalado"/>
+        </div>
+        <div class="sobre-badge">
+          <div class="n">10+</div>
+          <div class="t">Anos de<br>Experiência</div>
+        </div>
+      </div>
+
+      <div class="rv rv2">
+        <div class="eyebrow">Quem somos</div>
+        <h2 class="display d-xl" style="margin-bottom:24px">
+          CONSTRUINDO<br>COM QUEM<br>
+          <span class="text-gold">VOCÊ CONFIA</span>
+        </h2>
+        <p class="sobre-lead">
+          O Rogerinho começou com uma pá na mão e um compromisso simples:
+          entregar o que prometeu, do jeito certo, no prazo combinado.
+        </p>
+        <p class="sobre-body">
+          Com mais de 10 anos de experiência em obras residenciais e comerciais em
+          São Paulo, construímos uma reputação baseada em transparência, técnica e
+          respeito ao cliente. Nossa equipe executa desde a fundação até o último
+          rodapé — sem terceirizações descontroladas, com acompanhamento técnico
+          em cada etapa.
+        </p>
+        <p class="sobre-body">
+          Acreditamos que uma obra bem feita é aquela onde o cliente dorme tranquilo.
+          Por isso emitimos nota fiscal em 100% dos serviços, entregamos RT e ART,
+          e mantemos nossa equipe uniformizada e identificada em cada canteiro.
+        </p>
+        <div class="assinatura">
+          <div class="assin-av">
+            <div class="assin-av-ph">R</div>
+          </div>
+          <div>
+            <div class="assin-nome">Roger — Rogerinho</div>
+            <div class="assin-cargo">Fundador &amp; Responsável Técnico</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ STATS ══════════════ -->
+<section id="stats">
+  <div class="wrap" style="padding:0">
+    <div class="stats-grid">
+      <div class="stat rv"><div class="stat-n"><sup>+</sup>500</div><div class="stat-l">Obras Concluídas</div></div>
+      <div class="stat rv rv1"><div class="stat-n">10<sub>+</sub></div><div class="stat-l">Anos de Mercado</div></div>
+      <div class="stat rv rv2"><div class="stat-n">100<sub>%</sub></div><div class="stat-l">Com Nota Fiscal</div></div>
+      <div class="stat rv rv3"><div class="stat-n">5<sub>.0</sub></div><div class="stat-l">Google Reviews</div></div>
+      <div class="stat rv rv4"><div class="stat-n">0</div><div class="stat-l">Obras Sem ART</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SERVIÇOS ══════════════ -->
+<section id="servicos" class="sec">
+  <div class="wrap">
+    <div class="srv-header rv">
+      <div>
+        <div class="eyebrow">O que executamos</div>
+        <h2 class="display d-xl">SERVIÇOS<br>COMPLETOS</h2>
+      </div>
+      <p class="srv-desc">
+        Da estrutura ao detalhe final — uma equipe só, uma responsabilidade só.
+        Você não precisa gerenciar vários fornecedores: a gente cuida de tudo.
+      </p>
+    </div>
+    <div class="srv-grid rv">
+      <div class="srv-card">
+        <div class="srv-num">— 01</div>
+        <div class="srv-ico">🏗️</div>
+        <h3 class="srv-titulo">Construção Civil</h3>
+        <p class="srv-desc-card">Obras residenciais e comerciais do zero, da fundação à estrutura completa, com responsabilidade técnica e controle rigoroso de qualidade.</p>
+        <div class="srv-tags"><span class="tag">Fundação</span><span class="tag">Alvenaria</span><span class="tag">Laje</span><span class="tag">Estrutura</span></div>
+      </div>
+      <div class="srv-card">
+        <div class="srv-num">— 02</div>
+        <div class="srv-ico">💧</div>
+        <h3 class="srv-titulo">Hidráulica</h3>
+        <p class="srv-desc-card">Instalação e manutenção completa de sistemas hidráulicos: água fria, quente, esgoto e pluvial. Materiais certificados e execução limpa.</p>
+        <div class="srv-tags"><span class="tag">Encanamento</span><span class="tag">Banheiros</span><span class="tag">Esgoto</span><span class="tag">Cozinhas</span></div>
+      </div>
+      <div class="srv-card">
+        <div class="srv-num">— 03</div>
+        <div class="srv-ico">⚡</div>
+        <h3 class="srv-titulo">Instalação Elétrica</h3>
+        <p class="srv-desc-card">Projetos e instalações elétricas dentro das normas ABNT NBR 5410. Quadros de distribuição, iluminação LED embutida, pontos de dados e automação.</p>
+        <div class="srv-tags"><span class="tag">Quadro Elétrico</span><span class="tag">LED Embutido</span><span class="tag">Tomadas</span><span class="tag">CFTV</span></div>
+      </div>
+      <div class="srv-card">
+        <div class="srv-num">— 04</div>
+        <div class="srv-ico">🪟</div>
+        <h3 class="srv-titulo">Gesso &amp; Drywall</h3>
+        <p class="srv-desc-card">Forros, sancas, paredes e divisórias em gesso acartonado. Acabamento milimétrico, velocidade de execução e possibilidade de iluminação integrada.</p>
+        <div class="srv-tags"><span class="tag">Forro</span><span class="tag">Sancas</span><span class="tag">Drywall</span><span class="tag">Divisórias</span></div>
+      </div>
+      <div class="srv-card">
+        <div class="srv-num">— 05</div>
+        <div class="srv-ico">🎨</div>
+        <h3 class="srv-titulo">Pintura em Geral</h3>
+        <p class="srv-desc-card">Pintura interna e externa, texturizados, grafiatos e impermeabilização de fachada. Preparação de superfície completa para durabilidade máxima.</p>
+        <div class="srv-tags"><span class="tag">Pintura Interna</span><span class="tag">Fachada</span><span class="tag">Textura</span><span class="tag">Grafiato</span></div>
+      </div>
+      <div class="srv-card">
+        <div class="srv-num">— 06</div>
+        <div class="srv-ico">🪵</div>
+        <h3 class="srv-titulo">Acabamentos Finos</h3>
+        <p class="srv-desc-card">Pisos cerâmicos, porcelanato, piso vinílico e laminado. Rodapés, revestimentos e todos os detalhes que transformam uma obra em um lar.</p>
+        <div class="srv-tags"><span class="tag">Porcelanato</span><span class="tag">Vinílico</span><span class="tag">Rodapé</span><span class="tag">Revestimento</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ DIFERENCIAIS ══════════════ -->
+<section id="dif" class="sec">
+  <div class="wrap">
+    <div class="dif-head rv">
+      <div class="eyebrow">Por que a Rogerinho Construções</div>
+      <h2 class="display d-xl">OBRA SÉRIA,<br>RESULTADO REAL</h2>
+      <p>Você já viu obra sem documentação, pedreiro sumindo e prazo estourando. Aqui é diferente — e está escrito abaixo o motivo.</p>
+    </div>
+    <div class="dif-grid">
+      <div class="dif-card rv">
+        <div class="dif-ico">📄</div>
+        <h3 class="dif-titulo">100% com Nota Fiscal</h3>
+        <p class="dif-desc">Emitimos NF em todos os serviços, sem exceção. Segurança jurídica, comprovante para IR e valorização do seu imóvel garantidos.</p>
+      </div>
+      <div class="dif-card rv rv1">
+        <div class="dif-ico">🏛️</div>
+        <h3 class="dif-titulo">RT e ART em Todas as Obras</h3>
+        <p class="dif-desc">Responsabilidade Técnica e Anotação de Responsabilidade Técnica entregues em cada projeto. Sua obra dentro da lei, do começo ao fim.</p>
+      </div>
+      <div class="dif-card rv rv2">
+        <div class="dif-ico">👷</div>
+        <h3 class="dif-titulo">Equipe Uniformizada e Identificada</h3>
+        <p class="dif-desc">Todos os profissionais entram no seu imóvel com uniforme, crachá e EPIs. Você sabe quem está na sua obra — e nós zelamos pelo seu espaço.</p>
+      </div>
+      <div class="dif-card rv">
+        <div class="dif-ico">🔧</div>
+        <h3 class="dif-titulo">Tudo em Uma Única Empresa</h3>
+        <p class="dif-desc">Hidráulica, elétrica, gesso, pintura, piso e alvenaria — mesma equipe, mesma gestão, mesmo compromisso. Sem terceirizações que pulam a responsabilidade.</p>
+      </div>
+      <div class="dif-card rv rv1">
+        <div class="dif-ico">📱</div>
+        <h3 class="dif-titulo">Acompanhamento em Tempo Real</h3>
+        <p class="dif-desc">Você recebe fotos e atualizações frequentes pelo WhatsApp. Sem sumir, sem suposições — o Rogerinho responde e mantém você no controle da obra.</p>
+      </div>
+      <div class="dif-card rv rv2">
+        <div class="dif-ico">⏱️</div>
+        <h3 class="dif-titulo">Prazo Cumprido e Documentado</h3>
+        <p class="dif-desc">Definimos um cronograma antes de começar e trabalhamos para cumpri-lo. Atrasos são comunicados com antecedência — nunca como surpresa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PORTFÓLIO ══════════════ -->
+<section id="portfolio" class="sec">
+  <div class="wrap">
+    <div class="pf-header rv">
+      <div>
+        <div class="eyebrow">Portfólio</div>
+        <h2 class="display d-xl">OBRAS<br>ENTREGUES</h2>
+      </div>
+      <div class="pf-filters">
+        <button class="pf-btn active" data-f="all">Todos</button>
+        <button class="pf-btn" data-f="construcao">Construção</button>
+        <button class="pf-btn" data-f="acabamento">Acabamento</button>
+        <button class="pf-btn" data-f="eletrica">Elétrica</button>
+      </div>
+    </div>
+
+    <div class="pf-grid rv">
+      <div class="pf-item tall" data-c="construcao">
+        <img class="pf-img" src="1000113975.jpg" alt="Fachada residencial em obra"/>
+        <div class="pf-ov"><div class="pf-cat">Construção</div><div class="pf-title">Fachada &amp; Alvenaria</div><div class="pf-loc">São Paulo, SP · 2024</div></div>
+        <div class="pf-zoom">🔍</div>
+      </div>
+      <div class="pf-item" data-c="acabamento">
+        <img class="pf-img" src="1000113974.jpg" alt="Quarto com gesso e LED embutido"/>
+        <div class="pf-ov"><div class="pf-cat">Gesso &amp; Elétrica</div><div class="pf-title">Quarto — LED Embutido</div><div class="pf-loc">São Paulo, SP · 2024</div></div>
+        <div class="pf-zoom">🔍</div>
+      </div>
+      <div class="pf-item" data-c="eletrica">
+        <img class="pf-img" src="1000113973.jpg" alt="Quadro elétrico SICA instalado"/>
+        <div class="pf-ov"><div class="pf-cat">Elétrica</div><div class="pf-title">Quadro SICA — Distribuição</div><div class="pf-loc">São Paulo, SP · 2024</div></div>
+        <div class="pf-zoom">🔍</div>
+      </div>
+      <div class="pf-item wide" data-c="acabamento">
+        <img class="pf-img" src="1000113972.jpg" alt="Corredor com iluminação linear LED" style="object-position:center 30%"/>
+        <div class="pf-ov"><div class="pf-cat">Acabamento</div><div class="pf-title">Corredor — Iluminação Linear</div><div class="pf-loc">São Paulo, SP · 2024</div></div>
+        <div class="pf-zoom">🔍</div>
+      </div>
+      <div class="pf-item" data-c="construcao">
+        <img class="pf-img" src="1000113971.jpg" alt="Alvenaria em andamento — vista externa"/>
+        <div class="pf-ov"><div class="pf-cat">Construção</div><div class="pf-title">Alvenaria &amp; Estrutura</div><div class="pf-loc">São Paulo, SP · 2024</div></div>
+        <div class="pf-zoom">🔍</div>
+      </div>
+      <div class="pf-item" data-c="acabamento">
+        <img class="pf-img" src="1000113970.jpg" alt="Assentamento de piso em andamento"/>
+        <div class="pf-ov"><div class="pf-cat">Acabamento</div><div class="pf-title">Assentamento de Piso</div><div class="pf-loc">São Paulo, SP · 2024</div></div>
+        <div class="pf-zoom">🔍</div>
+      </div>
+      <div class="pf-item" data-c="eletrica">
+        <img class="pf-img" src="1000113969.jpg" alt="Quadro elétrico Tramontina montado"/>
+        <div class="pf-ov"><div class="pf-cat">Elétrica</div><div class="pf-title">Quadro Tramontina</div><div class="pf-loc">São Paulo, SP · 2024</div></div>
+        <div class="pf-zoom">🔍</div>
+      </div>
+      <div class="pf-item" data-c="acabamento">
+        <img class="pf-img" src="1000113968.jpg" alt="Piso vinílico instalado com rodapé branco"/>
+        <div class="pf-ov"><div class="pf-cat">Acabamento</div><div class="pf-title">Piso Vinílico Premium</div><div class="pf-loc">São Paulo, SP · 2024</div></div>
+        <div class="pf-zoom">🔍</div>
+      </div>
+      <div class="pf-item" data-c="acabamento">
+        <img class="pf-img" src="1000113967.jpg" alt="Cozinha com mármore e microondas Electrolux embutido"/>
+        <div class="pf-ov"><div class="pf-cat">Acabamento</div><div class="pf-title">Cozinha — Mármore &amp; Embutidos</div><div class="pf-loc">São Paulo, SP · 2024</div></div>
+        <div class="pf-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="pf-cta rv">
+      <a href="https://wa.me/5511932585638?text=Quero+ver+mais+fotos+de+obras!" target="_blank" class="btn btn-ghost">
+        Ver mais obras → Falar pelo WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- lightbox -->
+<div class="lb" id="lb"><button class="lb-x" id="lb-x">✕</button><img id="lb-img" src="" alt=""/></div>
+
+<!-- ══════════════ ANTES & DEPOIS ══════════════ -->
+<section id="ad" class="sec">
+  <div class="wrap">
+    <div class="ad-head rv">
+      <div class="eyebrow">Transformações reais</div>
+      <h2 class="display d-xl">ANTES<br>&amp; DEPOIS</h2>
+      <p>A diferença que uma obra bem executada faz. Comparativos reais de projetos entregues pela Rogerinho Construções.</p>
+    </div>
+    <div class="ad-grid rv">
+      <div class="ad-card">
+        <div class="ad-imgs">
+          <div class="ad-side"><img src="1000113971.jpg" alt="Antes" style="filter:sepia(.4) brightness(.75)"/><span class="ad-lbl a">ANTES</span></div>
+          <div class="ad-side"><img src="1000113975.jpg" alt="Depois"/><span class="ad-lbl d">DEPOIS</span></div>
+        </div>
+        <div class="ad-info"><div class="ad-titulo">Fachada Residencial</div><div class="ad-meta">Vila Mariana, SP · Alvenaria e pintura externa · 2024</div></div>
+      </div>
+      <div class="ad-card">
+        <div class="ad-imgs">
+          <div class="ad-side"><img src="1000113970.jpg" alt="Antes" style="filter:sepia(.4) brightness(.7)"/><span class="ad-lbl a">ANTES</span></div>
+          <div class="ad-side"><img src="1000113967.jpg" alt="Depois"/><span class="ad-lbl d">DEPOIS</span></div>
+        </div>
+        <div class="ad-info"><div class="ad-titulo">Cozinha com Mármore</div><div class="ad-meta">Moema, SP · Revestimento, bancada e armários · 2024</div></div>
+      </div>
+      <div class="ad-card">
+        <div class="ad-imgs">
+          <div class="ad-side"><img src="1000113973.jpg" alt="Antes" style="filter:sepia(.4) brightness(.7)"/><span class="ad-lbl a">ANTES</span></div>
+          <div class="ad-side"><img src="1000113969.jpg" alt="Depois"/><span class="ad-lbl d">DEPOIS</span></div>
+        </div>
+        <div class="ad-info"><div class="ad-titulo">Instalação Elétrica</div><div class="ad-meta">Santana, SP · Quadro e fiação completa · 2024</div></div>
+      </div>
+      <div class="ad-card">
+        <div class="ad-imgs">
+          <div class="ad-side"><img src="1000113974.jpg" alt="Antes" style="filter:grayscale(.8) brightness(.6)"/><span class="ad-lbl a">ANTES</span></div>
+          <div class="ad-side"><img src="1000113968.jpg" alt="Depois"/><span class="ad-lbl d">DEPOIS</span></div>
+        </div>
+        <div class="ad-info"><div class="ad-titulo">Piso &amp; Iluminação</div><div class="ad-meta">Ipiranga, SP · Piso vinílico + LED embutido · 2024</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROCESSO ══════════════ -->
+<section id="processo" class="sec" style="background:var(--charcoal)">
+  <div class="wrap">
+    <div class="proc-head rv">
+      <div class="eyebrow">Como trabalhamos</div>
+      <h2 class="display d-xl">DO CONTATO<br>À ENTREGA</h2>
+      <p>Um processo claro e transparente para que você saiba exatamente o que esperar em cada fase da obra.</p>
+    </div>
+    <div class="proc-steps">
+      <div class="step rv">
+        <div class="step-circle"><span class="step-n">01</span></div>
+        <h3>Contato</h3>
+        <p>Você nos chama pelo WhatsApp e descreve o que precisa. Rápido, sem burocracia.</p>
+      </div>
+      <div class="step rv rv1">
+        <div class="step-circle"><span class="step-n">02</span></div>
+        <h3>Visita Técnica</h3>
+        <p>Agendamos visita gratuita ao imóvel para avaliar o espaço e entender o projeto.</p>
+      </div>
+      <div class="step rv rv2">
+        <div class="step-circle"><span class="step-n">03</span></div>
+        <h3>Orçamento</h3>
+        <p>Em até 48h você recebe orçamento detalhado com materiais, prazo e condições.</p>
+      </div>
+      <div class="step rv rv3">
+        <div class="step-circle"><span class="step-n">04</span></div>
+        <h3>Execução</h3>
+        <p>Equipe uniformizada inicia conforme cronograma. Você recebe atualizações regulares.</p>
+      </div>
+      <div class="step rv rv4">
+        <div class="step-circle"><span class="step-n">05</span></div>
+        <h3>Entrega + NF</h3>
+        <p>Obra vistoriada, nota fiscal emitida e ART entregue. Tudo no jeito certo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ DEPOIMENTOS ══════════════ -->
+<section id="dep" class="sec">
+  <div class="wrap">
+    <div class="dep-head rv">
+      <div class="eyebrow">Clientes que já confiaram</div>
+      <h2 class="display d-xl">O QUE<br>DIZEM</h2>
+    </div>
+    <div class="dep-rating rv">
+      <div class="dep-big-n">5.0</div>
+      <div>
+        <div class="dep-big-s">★★★★★</div>
+        <div class="dep-big-l">Média no Google Meu Negócio</div>
+      </div>
+    </div>
+    <div class="dep-grid">
+      <div class="dep-card rv">
+        <div class="dep-q">"</div>
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-txt">"O Rogerinho reformou minha casa inteira — elétrica, hidráulica, gesso e pintura. Entregou no prazo, com nota fiscal, e o acabamento foi impecável. Raridade no mercado de SP."</p>
+        <div class="dep-autor">
+          <div class="dep-av"><div class="dep-av-ph">M</div></div>
+          <div>
+            <div class="dep-nome">Marcos Oliveira</div>
+            <div class="dep-cidade">Vila Mariana, SP</div>
+            <div class="dep-obra">Reforma residencial completa</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-card rv rv1">
+        <div class="dep-q">"</div>
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-txt">"Construíram meu consultório do zero. Fiquei impressionada com a organização — equipe uniformizada, ART e nota fiscal entregues sem eu precisar pedir. Profissionalismo de verdade."</p>
+        <div class="dep-autor">
+          <div class="dep-av"><div class="dep-av-ph">A</div></div>
+          <div>
+            <div class="dep-nome">Ana Paula Ferreira</div>
+            <div class="dep-cidade">Guarulhos, SP</div>
+            <div class="dep-obra">Construção de consultório</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-card rv rv2">
+        <div class="dep-q">"</div>
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-txt">"Nunca tinha contratado empresa que faz tudo. Fundação, hidráulica, elétrica, piso e pintura — mesma equipe, mesmo responsável. Pouquei muito tempo e dor de cabeça."</p>
+        <div class="dep-autor">
+          <div class="dep-av"><div class="dep-av-ph">R</div></div>
+          <div>
+            <div class="dep-nome">Ricardo Neves</div>
+            <div class="dep-cidade">Santo André, SP</div>
+            <div class="dep-obra">Casa residencial nova</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-card rv">
+        <div class="dep-q">"</div>
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-txt">"O ponto que mais me surpreendeu foi a comunicação. O Rogerinho mandava fotos todo dia. Nunca fiquei sem saber o que estava acontecendo na minha obra."</p>
+        <div class="dep-autor">
+          <div class="dep-av"><div class="dep-av-ph">C</div></div>
+          <div>
+            <div class="dep-nome">Carla Mendonça</div>
+            <div class="dep-cidade">Moema, SP</div>
+            <div class="dep-obra">Reforma de apartamento</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-card rv rv1">
+        <div class="dep-q">"</div>
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-txt">"Precisava de reforma urgente na loja. Entraram, fizeram elétrica nova, revestimento e pintura — entregaram em 3 semanas como prometido. Impecável."</p>
+        <div class="dep-autor">
+          <div class="dep-av"><div class="dep-av-ph">F</div></div>
+          <div>
+            <div class="dep-nome">Felipe Augusto</div>
+            <div class="dep-cidade">Pinheiros, SP</div>
+            <div class="dep-obra">Reforma comercial de loja</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-card rv rv2">
+        <div class="dep-q">"</div>
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-txt">"Contratei para o gesso com LED no quarto e fiquei tão satisfeita que chamei de volta para a cozinha. Resultado perfeito nas duas vezes. Com certeza vou chamar de novo."</p>
+        <div class="dep-autor">
+          <div class="dep-av"><div class="dep-av-ph">J</div></div>
+          <div>
+            <div class="dep-nome">Juliana Ramos</div>
+            <div class="dep-cidade">Ipiranga, SP</div>
+            <div class="dep-obra">Gesso + Reforma de cozinha</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FAQ ══════════════ -->
+<section id="faq" class="sec" style="background:var(--charcoal)">
+  <div class="wrap">
+    <div class="faq-head rv">
+      <div class="eyebrow">Perguntas Frequentes</div>
+      <h2 class="display d-xl">DÚVIDAS<br>COMUNS</h2>
+      <p>O que os clientes mais perguntam antes de contratar.</p>
+    </div>
+    <div class="faq-list rv">
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-t">Vocês emitem nota fiscal para todos os serviços?</span><div class="faq-arr">▼</div></div>
+        <div class="faq-a"><div class="faq-a-in">Sim, 100% dos nossos serviços são acompanhados de nota fiscal — sem exceção. Isso garante segurança jurídica, serve como comprovante para IR e valoriza o imóvel na hora de vender ou alugar.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-t">O que é ART e por que ela é importante?</span><div class="faq-arr">▼</div></div>
+        <div class="faq-a"><div class="faq-a-in">ART (Anotação de Responsabilidade Técnica) é um documento emitido pelo CREA que comprova que a obra foi executada com acompanhamento técnico habilitado. Protege você legalmente e é obrigatória em obras de maior porte. Incluímos em todos os projetos.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-t">Quanto tempo leva para receber o orçamento?</span><div class="faq-arr">▼</div></div>
+        <div class="faq-a"><div class="faq-a-in">Após a visita técnica gratuita ao imóvel, entregamos o orçamento detalhado em até 48 horas úteis. O documento inclui materiais, mão de obra, cronograma estimado e condições de pagamento.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-t">Vocês atendem em qual região de SP?</span><div class="faq-arr">▼</div></div>
+        <div class="faq-a"><div class="faq-a-in">Atendemos São Paulo capital e grande parte da Região Metropolitana: Guarulhos, Santo André, São Bernardo, Mauá, Diadema, Osasco, Cotia, Carapicuíba e adjacências. Para outras cidades, entre em contato para verificarmos disponibilidade.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-t">Preciso comprar os materiais ou vocês incluem?</span><div class="faq-arr">▼</div></div>
+        <div class="faq-a"><div class="faq-a-in">Trabalhamos das duas formas. Podemos incluir todos os materiais no orçamento (mais prático) ou trabalhar apenas com mão de obra se você preferir comprar diretamente. Discutimos a melhor opção na visita técnica.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-t">Vocês têm garantia nos serviços?</span><div class="faq-arr">▼</div></div>
+        <div class="faq-a"><div class="faq-a-in">Sim. Oferecemos garantia nos serviços executados conforme especificado em contrato. Vícios de execução são corrigidos por nossa conta. Nosso objetivo é que você nunca precise acionar a garantia — mas ela existe e é séria.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-t">Como funciona o pagamento?</span><div class="faq-arr">▼</div></div>
+        <div class="faq-a"><div class="faq-a-in">Trabalhamos com parcelamento vinculado ao andamento da obra: entrada, pagamentos por etapa e saldo na entrega. Aceitamos PIX e transferência. As condições são definidas em contrato antes de começar.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-t">Atendem obras pequenas como banheiro ou quarto?</span><div class="faq-arr">▼</div></div>
+        <div class="faq-a"><div class="faq-a-in">Sim, atendemos desde reformas pontuais (troca de piso, banheiro, pintura de ambiente) até construções completas. Entre em contato descrevendo o que precisa e verificamos a viabilidade.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ÁREA DE ATUAÇÃO ══════════════ -->
+<section id="area" class="sec">
+  <div class="wrap">
+    <div class="area-grid">
+      <div class="rv">
+        <div class="eyebrow">Área de Atuação</div>
+        <h2 class="display d-xl" style="margin-bottom:16px">ONDE<br>ATUAMOS</h2>
+        <p style="font-size:16px;color:var(--mute-lt);line-height:1.75">
+          São Paulo capital e Região Metropolitana. Para cidades do interior, entre em contato para avaliarmos a viabilidade.
+        </p>
+        <div class="cidades">
+          <div class="cidade">São Paulo (capital)</div>
+          <div class="cidade">Guarulhos</div>
+          <div class="cidade">Santo André</div>
+          <div class="cidade">São Bernardo</div>
+          <div class="cidade">Mauá</div>
+          <div class="cidade">Diadema</div>
+          <div class="cidade">Osasco</div>
+          <div class="cidade">Cotia</div>
+          <div class="cidade">Carapicuíba</div>
+          <div class="cidade">Suzano</div>
+        </div>
+      </div>
+      <div class="area-map rv rv2">
+        <!-- Cole aqui o iframe do Google Maps com seu endereço real -->
+        <!-- Ex: <iframe src="https://www.google.com/maps/embed?pb=!1m18..."></iframe> -->
+        <div class="area-map-ph">
+          <div class="ico">📍</div>
+          <p>
+            Adicione seu mapa aqui:<br>
+            Google Maps → Compartilhar → Incorporar mapa<br><br>
+            <a href="https://maps.google.com/?q=São+Paulo" target="_blank">Ver São Paulo no Google Maps →</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CTA FINAL ══════════════ -->
+<section id="cta" class="sec">
+  <div class="wrap">
+    <div class="cta-grid">
+      <div class="rv">
+        <div class="eyebrow">Pronto para começar?</div>
+        <h2 class="display d-xl">
+          SOLICITE<br>SEU ORÇAMENTO<br>
+          <span class="text-gold">AGORA</span>
+        </h2>
+        <div class="cta-checks">
+          <div class="cta-check"><div class="check-ico">✓</div> Visita técnica gratuita e sem compromisso</div>
+          <div class="cta-check"><div class="check-ico">✓</div> Orçamento detalhado em até 48h</div>
+          <div class="cta-check"><div class="check-ico">✓</div> Nota Fiscal em 100% dos serviços</div>
+          <div class="cta-check"><div class="check-ico">✓</div> RT e ART em todas as obras</div>
+          <div class="cta-check"><div class="check-ico">✓</div> Equipe uniformizada e identificada</div>
+          <div class="cta-check"><div class="check-ico">✓</div> Atendemos SP e Região Metropolitana</div>
+        </div>
+        <div class="quick-contacts">
+          <a href="https://wa.me/5511932585638?text=Olá,%20quero%20um%20orçamento%20para%20minha%20obra!" target="_blank" class="qc">
+            <div class="qc-ico">💬</div>
+            <div><div class="qc-lbl">WhatsApp · Resposta em minutos</div><div class="qc-val">(11) 93258-5638</div></div>
+          </a>
+          <a href="tel:+5511932585638" class="qc">
+            <div class="qc-ico">📞</div>
+            <div><div class="qc-lbl">Ligação Direta</div><div class="qc-val">(11) 93258-5638</div></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="rv rv2">
+        <div class="form-box">
+          <div class="form-title">FALE COM A GENTE</div>
+          <form id="cform" onsubmit="sendForm(event)">
+            <div class="fg-row">
+              <div class="fg"><label>Seu Nome</label><input type="text" name="nome" placeholder="João Silva" required/></div>
+              <div class="fg"><label>WhatsApp</label><input type="tel" name="tel" placeholder="(11) 9xxxx-xxxx" required/></div>
+            </div>
+            <div class="fg">
+              <label>Tipo de Serviço</label>
+              <select name="servico">
+                <option value="">Selecione o serviço</option>
+                <option>Construção completa</option>
+                <option>Reforma residencial</option>
+                <option>Reforma comercial</option>
+                <option>Instalação elétrica</option>
+                <option>Instalação hidráulica</option>
+                <option>Gesso &amp; Drywall</option>
+                <option>Pintura</option>
+                <option>Piso &amp; Revestimento</option>
+                <option>Outro serviço</option>
+              </select>
+            </div>
+            <div class="fg"><label>Cidade / Bairro</label><input type="text" name="cidade" placeholder="Ex: Vila Mariana, SP"/></div>
+            <div class="fg"><label>Descreva sua obra</label><textarea name="msg" placeholder="Metragem estimada, prazo desejado, o que já tem pronto..."></textarea></div>
+            <button type="submit" class="btn btn-gold btn-full" id="fbtn">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.117 1.522 5.845L.057 23.527a.5.5 0 0 0 .606.606l5.735-1.464A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.944 0-3.77-.494-5.36-1.361l-.385-.215-3.978 1.016 1.04-3.648-.235-.374A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              Solicitar Orçamento Gratuito
+            </button>
+            <p class="form-disclaimer">Suas informações são confidenciais e não serão compartilhadas.</p>
+          </form>
+          <div class="form-ok" id="fok">
+            <div class="ico">✅</div>
+            <h3>MENSAGEM ENVIADA!</h3>
+            <p>O Rogerinho vai entrar em contato em breve pelo WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="ft-main">
+      <div class="ft-brand">
+        <a href="#" class="logo">
+          <div class="logo-hex"><span>RC</span></div>
+          <div class="logo-words">
+            <span class="logo-name">ROGERINHO</span>
+            <span class="logo-sub">Construções & Reformas</span>
+          </div>
+        </a>
+        <p>Construção e reforma completa em São Paulo e Região Metropolitana. Da fundação ao acabamento, com nota fiscal, ART e equipe uniformizada.</p>
+        <div class="ft-social">
+          <a href="#" class="ft-soc" title="Instagram">📷</a>
+          <a href="#" class="ft-soc" title="Facebook">👥</a>
+          <a href="https://wa.me/5511932585638" class="ft-soc" title="WhatsApp" target="_blank">💬</a>
+          <a href="#" class="ft-soc" title="YouTube">▶️</a>
+        </div>
+        <div class="ft-selos">
+          <div class="selo">NF Garantida</div>
+          <div class="selo">RT / ART</div>
+          <div class="selo">CREA</div>
+        </div>
+      </div>
+      <div>
+        <div class="ft-col-title">Serviços</div>
+        <div class="ft-links">
+          <a href="#servicos">Construção Civil</a>
+          <a href="#servicos">Hidráulica</a>
+          <a href="#servicos">Instalação Elétrica</a>
+          <a href="#servicos">Gesso &amp; Drywall</a>
+          <a href="#servicos">Pintura</a>
+          <a href="#servicos">Acabamentos</a>
+        </div>
+      </div>
+      <div>
+        <div class="ft-col-title">Empresa</div>
+        <div class="ft-links">
+          <a href="#sobre">Sobre Nós</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#ad">Antes &amp; Depois</a>
+          <a href="#dep">Depoimentos</a>
+          <a href="#faq">FAQ</a>
+          <a href="#area">Área de Atuação</a>
+        </div>
+      </div>
+      <div>
+        <div class="ft-col-title">Contato</div>
+        <div class="ft-contacts">
+          <a href="https://wa.me/5511932585638" target="_blank">💬 (11) 93258-5638</a>
+          <a href="tel:+5511932585638">📞 (11) 93258-5638</a>
+          <p>📍 São Paulo e Grande SP</p>
+          <p>⏰ Seg–Sex: 7h–18h · Sáb: 7h–12h</p>
+        </div>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>© 2025 <span class="g">Rogerinho Construções</span>. Todos os direitos reservados.</p>
+      <div class="ft-legal">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════ WHATSAPP FLOAT ══════════════ -->
+<a href="https://wa.me/5511932585638?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento%20gratuito!" target="_blank" class="wpp">
+  <div class="wpp-pulse"></div>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.117 1.522 5.845L.057 23.527a.5.5 0 0 0 .606.606l5.735-1.464A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.944 0-3.77-.494-5.36-1.361l-.385-.215-3.978 1.016 1.04-3.648-.235-.374A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  Orçamento Grátis
+</a>
+
+<!-- ══════════════ JAVASCRIPT ══════════════ -->
+<script>
+// Scroll reveal
+const ro = new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target)}})
+},{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+
+// Navbar scroll — show CTA after 100px
+const navCta = document.getElementById('nav-cta');
+const navEl  = document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>100){navCta.classList.add('show');navEl.style.boxShadow='0 8px 40px rgba(0,0,0,.5)'}
+  else{navCta.classList.remove('show');navEl.style.boxShadow=''}
+},{passive:true});
+
+// Hamburger
+const ham = document.getElementById('ham');
+const mob = document.getElementById('mob');
+ham.addEventListener('click',()=>{
+  ham.classList.toggle('open');
+  mob.style.display = mob.style.display==='flex' ? 'none' : 'flex';
+});
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  ham.classList.remove('open');mob.style.display='none';
+}));
+
+// Portfolio filter
+document.querySelectorAll('.pf-btn').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.pf-btn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    const f=b.dataset.f;
+    document.querySelectorAll('.pf-item').forEach(i=>{
+      i.style.display=(f==='all'||i.dataset.c===f)?'':'none';
+    });
+  });
+});
+
+// Lightbox
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lb-img');
+document.querySelectorAll('.pf-item').forEach(i=>{
+  i.addEventListener('click',()=>{
+    lbImg.src=i.querySelector('.pf-img').src;
+    lb.classList.add('open');
+    document.body.style.overflow='hidden';
+  });
+});
+const closeLb=()=>{lb.classList.remove('open');document.body.style.overflow=''};
+document.getElementById('lb-x').addEventListener('click',closeLb);
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement,isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));
+    if(!isOpen)item.classList.add('open');
+  });
+});
+
+// Form
+function sendForm(e){
+  e.preventDefault();
+  const btn=document.getElementById('fbtn');
+  btn.disabled=true;btn.textContent='Enviando...';
+  // Integrar com Formspree: fetch('https://formspree.io/f/SEU_ID',{method:'POST',body:new FormData(e.target)})
+  setTimeout(()=>{
+    document.getElementById('cform').style.display='none';
+    document.getElementById('fok').style.display='block';
+  },1000);
+}
+
+// Active nav link highlight on scroll
+const secs=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-130)cur=s.id});
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    a.style.color=a.getAttribute('href')==='#'+cur?'var(--gold)':'';
+  });
+},{passive:true});
+</script>
+</body>
+</html>
